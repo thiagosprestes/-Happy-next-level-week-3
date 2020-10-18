@@ -7,7 +7,7 @@ import {
 } from "typeorm";
 import Image from "./Image";
 
-@Entity("orphanages")
+@Entity({ name: "orphanages" })
 export default class Orphanage {
   @PrimaryGeneratedColumn("increment")
   id: number;
@@ -28,7 +28,7 @@ export default class Orphanage {
   instructions: string;
 
   @Column()
-  open_hours: string;
+  opening_hours: string;
 
   @Column()
   open_on_weekends: boolean;
